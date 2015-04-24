@@ -13,3 +13,10 @@ class Persona(models.Model):
 
 	def __str__(self):
 		return self.nombre
+
+
+class MasterTeacher(Persona, models.Model):
+	experiencia = models.CharField(max_length = 5)
+
+	def __str__(self):
+		return self.nombre

@@ -39,7 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
+    #'django.contrib.sites',
     'app.campus',
 )
 
@@ -88,7 +88,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
+ 
 #MEDIA_URL = PATH_PROJECT.child('media')
 
 # Internationalization
