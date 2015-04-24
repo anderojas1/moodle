@@ -7,8 +7,8 @@ class Persona(models.Model):
 	apellidos = models.CharField(max_length=50)
 	sexo = models.CharField(max_length=20)
 	email = models.CharField(max_length=50)
-	celular = models.CharField(max_length=30)
-	fijo = models.CharField(max_length=30)
+	celular = models.CharField(max_length=30, null=True, blank=True)
+	fijo = models.CharField(max_length=30, null=True, blank=True)
 	fecha_nacimiento = models.DateField()
 
 	def __str__(self):
@@ -16,7 +16,7 @@ class Persona(models.Model):
 
 
 class MasterTeacher(Persona, models.Model):
-	experiencia = models.CharField(max_length = 5)
+	experiencia = models.IntegerField()
 
 	def __str__(self):
 		return self.nombre
