@@ -1,5 +1,5 @@
 from django.db import models
-from django.core.validators import MaxValueValidator, MinValueValidator
+#from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 # Create your models here.
@@ -8,7 +8,7 @@ class Persona(models.Model):
 	nombre = models.CharField(max_length=50)
 	apellidos = models.CharField(max_length=50)
 	sexo = models.CharField(max_length=20)
-	email = models.CharField(max_length=50)
+	email = models.EmailField(max_length=50)
 	celular = models.CharField(max_length=30, null=True, blank=True)
 	fijo = models.CharField(max_length=30, null=True, blank=True)
 	fecha_nacimiento = models.DateField()
@@ -16,12 +16,14 @@ class Persona(models.Model):
 	def __str__(self):
 		return self.nombre
 
+	#def enviarCorreo():
+	#	print("correoenviado %s" % email)
+
 
 class MasterTeacher(Persona):
-	experiencia = models.IntegerField(default=0, validators=[
-		MaxValueValidator(80),
-		MinValueValidator(0)])
+	experiencia = models.PositiveIntegerField()
 
 	def __str__(self):
 		return self.nombre
+
 
