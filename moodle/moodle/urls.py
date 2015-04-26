@@ -13,5 +13,8 @@ urlpatterns = [
     url(r'^', include('app.campus.urls')),
 
     #Personas
-    url(r'^persona/', include('app.campus.urls'))
+    url(r'^persona/', include('app.campus.urls')),
+
+    #cursos
+    url(r'^curso/', include('app.curso.urls'))
 ]

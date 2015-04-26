@@ -1,4 +1,6 @@
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator
+
 
 # Create your models here.
 class Persona(models.Model):
@@ -15,8 +17,11 @@ class Persona(models.Model):
 		return self.nombre
 
 
-class MasterTeacher(Persona, models.Model):
-	experiencia = models.IntegerField()
+class MasterTeacher(Persona):
+	experiencia = models.IntegerField(default=0, validators=[
+		MaxValueValidator(80),
+		MinValueValidator(0)])
 
 	def __str__(self):
 		return self.nombre
+

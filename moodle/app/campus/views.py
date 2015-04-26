@@ -20,3 +20,4 @@ class ListarPersonas(ListView):
 	template_name = 'campus/listados-personas.html'
 	model = MasterTeacher
 	context_object_name = 'masterteachers'
+
