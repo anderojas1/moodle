@@ -8,3 +8,7 @@ class Curso(models.Model):
 
 	def __str__(self):
 		return self.nombre
+
+class Cohorte(models.Model):
+	curso = models.ForeignKey(Curso)
+	

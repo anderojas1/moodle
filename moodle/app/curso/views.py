@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.core.urlresolvers import reverse_lazy
 from django.views.generic import CreateView, ListView
-from .models import Curso
+from .models import Curso, Cohorte
 
 # Create your views here.
 
@@ -12,4 +12,10 @@ class RegistrarCurso(CreateView):
 	template_name =  'curso/registrar-curso.html'
 	model = Curso
 	fields = ['codigo', 'nombre', 'area']
+	success_url = reverse_lazy('success')
+
+class RegistrarCohorte(CreateView):
+	template_name = 'curso/registrar-cohorte.html'
+	model = Cohorte
+	fields = ['curso']
 	success_url = reverse_lazy('success')
