@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Registrar Cohorte</title>
+	</head>
+	<body>
+		<h2>Registrar Cohorte</h2>
+		<form method='POST'>
+			{% csrf_token %}
+			{{form.as_p}}
+			<input type='submit' value='Registrar'>
+		</form>
+	</body>
+</html>
