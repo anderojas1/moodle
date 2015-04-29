@@ -1,13 +1,17 @@
-<html>
-	<head>
-		<title>Registrar Master Teacher</title>
-	</head>
-	<body>
-		<h2>Registrar Master teacher</h2>
-		<form method='POST'>
-			{% csrf_token %}
-			{{form.as_p}}
-			<input type='submit' value='Registrar'>
-		</form>
-	</body>
-</html>
+{% extends "campus/base.html" %}
+
+{% block title %}
+Master Teacher | Registro
+{% endblock %}
+
+{% block content %}
+<h2>Registrar Master Teacher</h2>
+<div class="registro-masterteacher">
+
+	<form method='POST'>
+		{% csrf_token %}
+		{{form.as_p}}
+		<input type='submit' value='Registrar'>
+	</form>
+</div>
+{% endblock %}

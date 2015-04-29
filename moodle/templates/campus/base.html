@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta http-equiv="Content/Type" content="text/html; charset=UTF-8" />
+		<title>{% block title %}{% endblock %}</title>
+	</head>
+	<body>
+		<header class="encabezado">
+			<div class="banner">
+				<!--banner aqui-->
+			</div>	
+			<div class="menu-principal">
+				<ul>
+					<li>Inicio</li>
+					<li>Nuestros cursos</li>
+					<li>Cont&aacutectenos</li>
+				</ul>
+			</div>
+		</header>
+		
+		{% block content %} {% endblock %}
+
+		<footer>
+			<!-- Pie de página aquí -->
+		</footer>	
+
+	</body>
+</html>
