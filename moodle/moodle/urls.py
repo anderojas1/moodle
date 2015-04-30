@@ -1,5 +1,6 @@
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.contrib.auth.views import login
 
 urlpatterns = [
     # Examples:
@@ -8,6 +9,7 @@ urlpatterns = [
 
     #administrador Django
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^accounts/login', login, kwargs={'template_name': 'campus/login.html'}),
 
     #Inicio
     url(r'^', include('app.campus.urls')),
