@@ -1,7 +1,7 @@
 from django.shortcuts import render_to_response
 from django.core.urlresolvers import reverse_lazy
 from django.views.generic import CreateView, ListView
-from .models import Persona, MasterTeacher
+from .models import Persona, MasterTeacher, SecretariaEducacion
 
 def index(request):
 	return render_to_response('campus/index.html')
@@ -22,3 +22,8 @@ class ListarPersonas(ListView):
 	model = MasterTeacher
 	context_object_name = 'masterteachers'
 
+class RegistrarSecretariaEducacion(CreateView):
+    template_name = 'campus/secretaria-educacion.html'
+    model = SecretariaEducacion
+    fields = ['codigo', 'entidadTerritorial', 'email', 'fijo', 'direccion']
+    success_url = reverse_lazy('success')
