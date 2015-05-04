@@ -1,8 +1,9 @@
-localhost:8000/							página principal del campus
-localhost:8000/persona/success			registro exitoso (para cambiar**)
-localhost:8000/admin					administrador Django
-localhost:8000/accounts/login			login para usuarios
-localhost:8000/registrar				registrar master teacher (para cambiar**)
-localhost:8000/persona/listado-personas	listado personas master teacher (para cambiar**)
-localhost:8000/curso/registrar-curso	registrar curso
-localhost:8000/curso/registrar-cohorte	registrar cohortes
+localhost:8000/								página principal del campus
+localhost:8000/persona/success				registro exitoso (para cambiar**)
+localhost:8000/admin						administrador Django
+localhost:8000/accounts/login				login para usuarios
+localhost:8000/registrar					registrar master teacher (para cambiar**)
+localhost:8000/persona/listado-personas		listado personas master teacher (para cambiar**)
+localhost:8000/persona/secretaria-educacion	registrar secretaria de educacion
+localhost:8000/curso/registrar-curso		registrar curso
+localhost:8000/curso/registrar-cohorte		registrar cohortes
