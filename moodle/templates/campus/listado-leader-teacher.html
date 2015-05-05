@@ -8,18 +8,36 @@ Master Teacher | Listado
 <h2>Listado Leader Teacher</h2>
 <div class="listado-leaderTeacher">
 
-    <table>
+    <table border="1">
 
 		<tr>
-            <td> Nombre </td>
-            <td> otra cosa</td>
+            <td><b> Cedula </b></td>
+            <td><b> Nombre </b></td>
+            <td><b> Apellido </b></td>
+            <td><b> Fecha Nacimiento </b></td>
+            <td><b> Sexo </b></td>
+            <td><b> Email </b></td>
+            <td><b> Celular </b></td>
+            <td><b> Fijo </b></td>
+            <td><b>  Area Asignada </b></td>
+            <td><b> Calificacion </b></td>
+            <td><b> Certificado </b></td>
 
         </tr>
 
         {% for persona in leaderTeacher%}
             <tr>
-		      <td>{{persona.nombre}}</td>
+		      <td>{{persona.cedula}}</td>
+              <td>{{persona.nombre}} </td>
+              <td>{{persona.apellidos}} </td>
+              <td>{{persona.fecha_nacimiento}} </td>
+              <td>{{persona.sexo}} </td>
+              <td>{{persona.email}} </td>
               <td>{{persona.celular}} </td>
+              <td>{{persona.fijo}} </td>
+              <td>{{persona.areaAsignada}} </td>
+              <td>{{persona.calificacion}} </td>
+              <td>{{persona.certificado}} </td>
             </tr>
         {% endfor %}
 
