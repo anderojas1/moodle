@@ -36,3 +36,11 @@ class SecretariaEducacion(models.Model):
 
     def __str__(self):
         return self.codigo
+
+class LeaderTeacher(Persona):
+    areaAsignada = models.CharField(max_length = 50)
+    calificacion = models.CharField(max_length = 2)
+    certificado = models.CharField(max_length = 50)
+
+    def __str__(self):
+        return  self.nombre
