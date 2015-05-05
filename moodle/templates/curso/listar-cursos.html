@@ -1,0 +1,27 @@
+{% extends "campus/base.html" %}
+
+{% block title %}
+Cursos | Listado
+{% endblock %}
+
+{% block content %}
+<h2>Listado de Cursos</h2>
+<div class="listado-cursos">
+	<table border="1">
+        <tr>
+            <td> CODIGO </td>
+            <td> NOMBRE </td>
+            <td> AREA </td>
+        </tr>
+
+        {% for curso in objCurso %}
+            <tr>
+                <td>{{curso.codigo}}</td>
+                <td>{{curso.nombre}}</td>
+                <td>{{curso.area}}</td>
+            </tr>
+		{% endfor %}
+
+	</table>
+</div>
+{% endblock %}

@@ -4,9 +4,9 @@ from django.views.generic import CreateView, ListView
 from .models import Curso, Cohorte
 
 # Create your views here.
-
 def success(request):
 	return render_to_response('curso/success.html')
+
 
 class RegistrarCurso(CreateView):
 	template_name =  'curso/registrar-curso.html'
@@ -14,8 +14,21 @@ class RegistrarCurso(CreateView):
 	fields = ['codigo', 'nombre', 'area']
 	success_url = reverse_lazy('success')
 
+
 class RegistrarCohorte(CreateView):
 	template_name = 'curso/registrar-cohorte.html'
 	model = Cohorte
 	fields = ['id', 'curso']
 	success_url = reverse_lazy('success')
+
+
+class ListarCursos(ListView):
+    template_name = 'curso/listar-cursos.html'
+    model = Curso
+    context_object_name = 'objCurso'
+
+
+class ListarCohortes(ListView):
+    template_name = 'curso/listar-cohortes.html'
+    model = Cohorte
+    context_object_name = 'objCohortes'

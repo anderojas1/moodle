@@ -1,6 +1,6 @@
 from django.conf.urls import include, url
 from .views import index, success
-from .views import RegistrarMasterTeacher, ListarPersonas, RegistrarSecretariaEducacion, RegistrarLeaderTeacher
+from .views import RegistrarMasterTeacher, ListarPersonas, RegistrarSecretariaEducacion, RegistrarLeaderTeacher, listarLeaderTeacher
 
 urlpatterns = [
     url(r'^$', 'app.campus.views.index'),
@@ -8,5 +8,6 @@ urlpatterns = [
     url(r'^registrar/$', RegistrarMasterTeacher.as_view(), name='registrar_persona'),
     url(r'^listados-personas/$', ListarPersonas.as_view(), name='listar_personas'),
     url(r'^secretaria-educacion/$', RegistrarSecretariaEducacion.as_view(), name='registrar_secretaria'),
-    url(r'^registrarLT/$', RegistrarLeaderTeacher.as_view(), name= 'registrar_leader_teacher')
+    url(r'^registrarLT/$', RegistrarLeaderTeacher.as_view(), name= 'registrar_leader_teacher'),
+    url(r'^listadoLT/$', listarLeaderTeacher.as_view(), name = 'listar_LT')
 ]
