@@ -1,0 +1,28 @@
+{% extends "campus/base.html" %}
+
+{% block title %}
+Master Teacher | Listado
+{% endblock %}
+
+{% block content %}
+<h2>Listado Leader Teacher</h2>
+<div class="listado-leaderTeacher">
+
+    <table>
+
+		<tr>
+            <td> Nombre </td>
+            <td> otra cosa</td>
+
+        </tr>
+
+        {% for persona in leaderTeacher%}
+            <tr>
+		      <td>{{persona.nombre}}</td>
+              <td>{{persona.celular}} </td>
+            </tr>
+        {% endfor %}
+
+     </table>
+</div>
+{% endblock %}
