@@ -1,0 +1,20 @@
+{% extends "campus/base.html" %}
+
+{% block title %}
+Delete | Master Teacher
+{% endblock %}
+
+{% block content %}
+
+<h2>Delete Master Teacher</h2>
+
+<p>Are you sure you want to delete the contact {{ master }}?</p>
+
+<form method="POST">
+  {% csrf_token %}
+
+  <input type="submit" value="Yes, delete." />
+  <a href="/">No, cancel.</a>
+</form>
+
+{% endblock %}

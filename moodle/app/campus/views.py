@@ -1,6 +1,6 @@
 from django.shortcuts import render_to_response
 from django.core.urlresolvers import reverse_lazy
-from django.views.generic import CreateView, ListView
+from django.views.generic import CreateView, ListView, DeleteView
 from .models import Persona, MasterTeacher, SecretariaEducacion, LeaderTeacher
 
 def index(request):
@@ -42,3 +42,9 @@ class listarLeaderTeacher(ListView):
     template_name = 'campus/listado-leader-teacher.html'
     model = LeaderTeacher
     context_object_name = 'leaderTeacher'
+
+class BorrarMasterTeacher(DeleteView):
+    template_name = 'campus/delete-master.html'
+    model = MasterTeacher
+    context_object_name = 'master'
+    success_url = 'campus/listados-personas'
