@@ -19,11 +19,13 @@ class Persona(models.Model):
 	#def enviarCorreo():
 	#	print("correoenviado %s" % email)
 
+
 class MasterTeacher(Persona):
 	experiencia = models.PositiveIntegerField()
 
 	def __str__(self):
 		return self.nombre
+
 
 class SecretariaEducacion(models.Model):
     codigo = models.CharField(primary_key = True, max_length = 30)

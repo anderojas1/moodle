@@ -17,5 +17,5 @@ class RegistrarCurso(CreateView):
 class RegistrarCohorte(CreateView):
 	template_name = 'curso/registrar-cohorte.html'
 	model = Cohorte
-	fields = ['curso']
+	fields = ['id', 'curso']
 	success_url = reverse_lazy('success')
