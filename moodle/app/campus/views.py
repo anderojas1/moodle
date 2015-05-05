@@ -1,7 +1,7 @@
 from django.shortcuts import render_to_response
 from django.core.urlresolvers import reverse_lazy
 from django.views.generic import CreateView, ListView
-from .models import Persona, MasterTeacher, SecretariaEducacion
+from .models import Persona, MasterTeacher, SecretariaEducacion, LeaderTeacher
 
 def index(request):
 	return render_to_response('campus/index.html')
@@ -26,4 +26,10 @@ class RegistrarSecretariaEducacion(CreateView):
     template_name = 'campus/secretaria-educacion.html'
     model = SecretariaEducacion
     fields = ['codigo', 'entidadTerritorial', 'email', 'fijo', 'direccion']
+    success_url = reverse_lazy('success')
+
+class RegistrarLeaderTeacher(CreateView):
+    template_name = 'campus/registrarLT.html'
+    model = LeaderTeacher
+    fields = ['cedula', 'nombre', 'apellidos', 'fecha_nacimiento', 'sexo', 'email', 'celular', 'fijo', 'areaAsignada', 'calificacion', 'certificado']
     success_url = reverse_lazy('success')

@@ -14,8 +14,13 @@ urlpatterns = [
     #Inicio
     url(r'^', include('app.campus.urls')),
 
+<<<<<<< HEAD
     #Personas
     url(r'^usuarios/', include('app.campus.urls')),
+=======
+    #Usuario
+    url(r'^usuario/', include('app.campus.urls')), #url(r'^persona/', include('app.campus.urls')),
+>>>>>>> 1d69285776e0113c04e0dd4977782fbbd5e357c6
 
     #cursos
     url(r'^curso/', include('app.curso.urls'))
