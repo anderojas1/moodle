@@ -1,13 +1,15 @@
+{% load staticfiles %}
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta http-equiv="Content/Type" content="text/html; charset=UTF-8" />
 		<title>{% block title %}{% endblock %}</title>
 	</head>
-	<body>
+	<body style="background: #F4F4F4;">
 		<header class="encabezado">
 			<div class="banner">
 				<!--banner aqui-->
+				<img src= "{% static 'logo.png' %}" width="310" height="80" />
 			</div>	
 			<div class="menu-principal">
 				<ul>
